@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Nhập năm dương lịch:</th>
+            <td><input type="number" id="nam"></td>
+        </tr>
+    </table>
+    <button onclick="chuyendoi()">Chuyển đổi</button>
+    <h3>Năm âm lịch là:</h3>
+    <div id="ketqua"></div>
+    <div id="ketqua2"></div>
+</body>
+</html>
+<script>
+    function chuyendoi(){
+        let year=document.getElementById('nam').value;
+        let can=Number(year)%10;
+        let chi=Number(year)%12;
+        switch (true){
+          case can==0:{
+            document.getElementById('ketqua').innerHTML=('Canh');
+            break; 
+          }
+          case can==1:{
+            document.getElementById('ketqua').innerHTML=('Tân');
+            break; 
+          }
+          case can==2:{
+            document.getElementById('ketqua').innerHTML=('Nhâm');
+            break; 
+          }
+          case can==3:{
+            document.getElementById('ketqua').innerHTML=('Quý');
+            break; 
+          }
+          case can==4:{
+            document.getElementById('ketqua').innerHTML=('Giáp');
+            break; 
+          }
+          case can==5:{
+            document.getElementById('ketqua').innerHTML=('Ất');
+            break; 
+          }
+          case can==6:{
+            document.getElementById('ketqua').innerHTML=('Bính');
+            break; 
+          }
+          case can==7:{
+            document.getElementById('ketqua').innerHTML=('Đinh');
+            break; 
+          }
+          case can==8:{
+            document.getElementById('ketqua').innerHTML=('Mậu');
+            break; 
+          }
+          case can==9:{
+            document.getElementById('ketqua').innerHTML=('Kỉ');
+            break; 
+          }
+        }
+        switch (true){
+          case chi==0:{
+            document.getElementById('ketqua2').innerHTML=('Thân');
+            break; 
+          }
+          case chi==1:{
+            document.getElementById('ketqua2').innerHTML=('Dậu');
+            break; 
+          }
+          case chi==2:{
+            document.getElementById('ketqua2').innerHTML=('Tuất');
+            break; 
+          }
+          case chi==3:{
+            document.getElementById('ketqua2').innerHTML=('Hợi');
+            break; 
+          }
+          case chi==4:{
+            document.getElementById('ketqua2').innerHTML=('Tí');
+            break; 
+          }
+          case chi==5:{
+            document.getElementById('ketqua2').innerHTML=('Sửu');
+            break; 
+          }
+          case chi==6:{
+            document.getElementById('ketqua2').innerHTML=('Dần');
+            break; 
+          }
+          case chi==7:{
+            document.getElementById('ketqua2').innerHTML=('Mão');
+            break; 
+          }
+          case chi==8:{
+            document.getElementById('ketqua2').innerHTML=('Thìn');
+            break; 
+          }
+          case chi==9:{
+            document.getElementById('ketqua').innerHTML=('Tỵ');
+            break; 
+          }
+          case chi==10:{
+            document.getElementById('ketqua').innerHTML=('Ngọ');
+            break; 
+          }
+          case chi==11:{
+            document.getElementById('ketqua').innerHTML=('Mùi');
+            break; 
+          }
+        }
+    }
+</script>
